@@ -88,12 +88,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
                   {item.label}
                 </button>
               ))}
-              <button 
-                onClick={() => handleNavigation('contact')}
-                className="bg-gold-500 hover:bg-gold-600 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-              >
-                Get Started
-              </button>
             </div>
 
             {/* Mobile menu button */}
@@ -125,14 +119,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
                   {item.label}
                 </button>
               ))}
-              <div className="px-3 py-2">
-                <button 
-                  onClick={() => handleNavigation('contact')}
-                  className="w-full bg-gold-500 hover:bg-gold-600 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-                >
-                  Get Started
-                </button>
-              </div>
             </div>
           </div>
         )}
