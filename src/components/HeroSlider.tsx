@@ -208,15 +208,7 @@ const HeroSlider = () => {
             }`}>
               <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20 shadow-2xl transform hover:scale-105 transition-all duration-500">
                 <div className="text-center space-y-6">
-                  <div className="bg-navy-900 text-white px-8 py-4 rounded-2xl font-bold text-4xl shadow-xl">
-                    CAVELLE
-                  </div>
-                  <div className="text-white font-semibold text-xl tracking-wider">
-                    GROUP LTD
-                  </div>
-                  <div className="text-gray-300 text-sm uppercase tracking-widest">
-                    Professional Recruitment
-                  </div>
+                  <img src="/logo.png" alt="Cavelle Group Logo" className="h-28 mx-auto" />
                   <div className="flex justify-center space-x-2">
                     <div className="w-3 h-3 bg-gold-400 rounded-full animate-pulse"></div>
                     <div className="w-3 h-3 bg-gold-400 rounded-full animate-pulse delay-100"></div>

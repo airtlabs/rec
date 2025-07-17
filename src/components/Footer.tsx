@@ -1,4 +1,3 @@
-import React from 'react';
 import { Linkedin, Twitter, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
@@ -28,6 +27,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5" />
               </a>
             </div>
+            <img src="/logo.png" alt="Cavelle Group Logo" className="h-16" />
           </div>
 
           {/* Services */}

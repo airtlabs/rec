@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
   ];
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${
+    <header className={`top-header fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
     }`}>
       {/* Top bar */}
@@ -64,16 +64,13 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
       {/* Main navigation */}
       <nav className="bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-24">
             {/* Logo */}
             <div 
               className="flex items-center cursor-pointer"
               onClick={() => handleNavigation('home')}
             >
-              <div className="bg-navy-900 text-white px-3 py-2 rounded-lg font-bold text-xl">
-                CAVELLE
-              </div>
-              <span className="ml-2 text-gray-600 font-medium">GROUP LTD</span>
+              <img src="/logo.png" alt="Cavelle Group Logo" className="h-20" />
             </div>
 
             {/* Desktop Navigation */}

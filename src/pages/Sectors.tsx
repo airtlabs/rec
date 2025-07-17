@@ -146,7 +146,7 @@ const Sectors = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {['United Kingdom', 'Germany', 'France', 'Netherlands', 'Ireland'].map((country, index) => (
+            {['United Kingdom', 'Germany', 'Poland', 'Malta', 'Ireland'].map((country, index) => (
               <div key={index} className="text-center">
                 <div className="bg-navy-900 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-8 h-8 text-white" />
