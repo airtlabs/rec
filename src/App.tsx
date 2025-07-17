@@ -11,6 +11,11 @@ import Contact from './pages/Contact';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
+  const handleNavigate = (page: string) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setCurrentPage(page);
+  };
+
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
@@ -32,7 +37,7 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <Header currentPage={currentPage} onNavigate={setCurrentPage} />
+      <Header currentPage={currentPage} onNavigate={handleNavigate} />
       <main>
         {renderPage()}
       </main>
