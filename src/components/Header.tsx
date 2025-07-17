@@ -52,11 +52,11 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>info@cavellegroup.com</span>
+              <span>info@cavellegroup.co.uk</span>
             </div>
           </div>
           <div className="text-sm">
-            Suite 6346 Unit 3a 34-35 Hatton Garden, Holborn, London, England, EC1N8DX
+            Suite 6346 Unit 3a 34-35 Hatton Garden, Holborn, London, EC1N8DX
           </div>
         </div>
       </div>

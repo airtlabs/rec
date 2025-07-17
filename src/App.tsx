@@ -18,9 +18,9 @@ function App() {
       case 'services':
         return <Services />;
       case 'sectors':
-        return <Sectors />;
+        return <Sectors onNavigate={setCurrentPage} />;
       case 'currently-hiring':
-        return <CurrentlyHiring />;
+        return <CurrentlyHiring onNavigate={setCurrentPage} />;
       case 'about':
         return <About />;
       case 'contact':

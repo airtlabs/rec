@@ -1,7 +1,11 @@
 import React from 'react';
 import { Heart, GraduationCap, ChefHat, Briefcase, Users, MapPin } from 'lucide-react';
 
-const Sectors = () => {
+const Sectors = ({ onNavigate }: { onNavigate: (page: string) => void }) => {
+  const handleNavigateToContact = () => {
+    onNavigate('contact');
+  };
+
   const sectors = [
     {
       icon: Heart,
@@ -117,7 +121,10 @@ const Sectors = () => {
                   <button className="bg-navy-900 hover:bg-navy-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                     View Open Positions
                   </button>
-                  <button className="border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                  <button
+                    className="border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                    onClick={handleNavigateToContact}
+                  >
                     Submit CV
                   </button>
                 </div>

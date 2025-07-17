@@ -49,9 +49,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-lg mb-1">London Office</h3>
                     <p className="text-gray-300">
-                      25 Moorgate<br />
-                      London EC2R 6AY<br />
-                      United Kingdom
+                      Suite 6346 Unit 3a 34-35 Hatton Garden, Holborn, London, EC1N8DX
                     </p>
                   </div>
                 </div>
@@ -62,7 +60,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                    <p className="text-gray-300">+44 20 7123 4567</p>
+                    <p className="text-gray-300">+44 07424413744</p>
                   </div>
                 </div>
 
@@ -72,7 +70,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Email</h3>
-                    <p className="text-gray-300">info@cavellegroup.com</p>
+                    <p className="text-gray-300">info@cavellegroup.co.uk</p>
                   </div>
                 </div>
 

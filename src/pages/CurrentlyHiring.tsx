@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
-import { Truck, Bus, Wrench, MapPin, Clock, KeyRound as Pound, Users, Calendar } from 'lucide-react';
+import { Truck, Bus, Wrench, MapPin, Clock, KeyRound as Pound, Users, Calendar, Euro } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const CurrentlyHiring = () => {
+interface CurrentlyHiringProps {
+  onNavigate: (page: string) => void;
+}
+
+const CurrentlyHiring: React.FC<CurrentlyHiringProps> = ({ onNavigate }) => {
   const [selectedJob, setSelectedJob] = useState<number | null>(null);
 
   const currentJobs = [
     {
       icon: Bus,
       title: 'Bus & Coach Drivers',
-      location: 'London, Manchester, Birmingham',
+      location: 'Ireland',
       type: 'Permanent & Temporary',
-      salary: '£25,000 - £35,000',
+      salary: '€35,000 - €45,000',
       description: 'We are urgently seeking experienced Bus & Coach Drivers for positions across major UK cities. Full training provided for the right candidates.',
       requirements: [
         'Valid UK driving license (Category D)',
@@ -32,9 +37,9 @@ const CurrentlyHiring = () => {
     {
       icon: Truck,
       title: 'Truck Drivers (HGV)',
-      location: 'UK Wide & Europe',
+      location: 'Poland',
       type: 'Permanent & Contract',
-      salary: '£30,000 - £45,000',
+      salary: '€30,000 - €45,000',
       description: 'Excellent opportunities for HGV drivers for UK and European routes. Both local and long-distance positions available.',
       requirements: [
         'Valid HGV license (Category C+E)',
@@ -56,9 +61,9 @@ const CurrentlyHiring = () => {
     {
       icon: Wrench,
       title: 'Heavy Vehicle Mechanics',
-      location: 'London, Birmingham, Leeds',
+      location: 'Ireland',
       type: 'Permanent',
-      salary: '£35,000 - £50,000',
+      salary: '€35,000 - €50,000',
       description: 'Skilled Heavy Vehicle Mechanics required for busy transport depots. Work on buses, coaches, and HGV vehicles.',
       requirements: [
         'NVQ Level 3 in Vehicle Maintenance',
@@ -145,7 +150,7 @@ const CurrentlyHiring = () => {
                           <span>{job.type}</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <Pound className="w-4 h-4" />
+                          <Euro className="w-4 h-4" />
                           <span>{job.salary}</span>
                         </div>
                       </div>
@@ -250,8 +255,11 @@ const CurrentlyHiring = () => {
           </div>
 
           <div className="text-center mt-12">
-            <button className="bg-gold-500 hover:bg-gold-600 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors">
-              Start Application Process
+            <button
+              className="bg-gold-500 hover:bg-gold-600 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors"
+              onClick={() => onNavigate('contact')}
+            >
+              Contact Us
             </button>
           </div>
         </div>
