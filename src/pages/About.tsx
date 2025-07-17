@@ -3,8 +3,8 @@ import { Award, Globe, Users, TrendingUp } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { number: '15+', label: 'Years Experience' },
-    { number: '2,500+', label: 'Successful Placements' },
+    { number: '2+', label: 'Years Experience' },
+    { number: '1500+', label: 'Successful Placements' },
     { number: '500+', label: 'Partner Companies' },
     { number: '98%', label: 'Client Satisfaction' }
   ];

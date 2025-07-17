@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Users, Target, Briefcase, Award, CheckCircle, ArrowRight, MapPin, Phone, Mail, Star } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
-import { Users, Target, Briefcase, TrendingUp, Shield, Clock, Award, Globe, CheckCircle, ArrowRight, MapPin, Phone, Mail, Star } from 'lucide-react';
 
-const Home = () => {
+interface HomeProps {
+  onNavigate: (page: string) => void;
+}
+
+const Home: React.FC<HomeProps> = ({ onNavigate }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleNavigation = (page: string) => {
+    window.scrollTo(0, 0);
+    onNavigate(page);
+  };
+
   const services = [
     {
       icon: Users,
@@ -52,8 +65,8 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '15+', label: 'Years Experience', icon: Award },
-    { number: '2,500+', label: 'Successful Placements', icon: Users },
+    { number: '2+', label: 'Years Experience', icon: Award },
+    { number: '1500+', label: 'Successful Placements', icon: Users },
     { number: '500+', label: 'Partner Companies', icon: Briefcase },
     { number: '98%', label: 'Client Satisfaction', icon: Star }
   ];
@@ -99,7 +112,7 @@ const Home = () => {
       location: 'London, Birmingham, Leeds',
       type: 'Permanent',
       urgency: 'Medium Priority',
-      positions: '15+ Available'
+      positions: '2+ Available'
     }
   ];
 
@@ -314,10 +327,16 @@ const Home = () => {
             our expert team is ready to help you achieve your staffing goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-gold-500 hover:bg-gold-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-gold-500/25">
+            <button
+              className="bg-gold-500 hover:bg-gold-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-gold-500/25"
+              onClick={() => handleNavigation('contact')}
+            >
               Start Recruitment Process
             </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-navy-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105">
+            <button
+              className="border-2 border-white text-white hover:bg-white hover:text-navy-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105"
+              onClick={() => handleNavigation('contact')}
+            >
               Schedule Consultation
             </button>
           </div>
